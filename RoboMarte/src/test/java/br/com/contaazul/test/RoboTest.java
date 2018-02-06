@@ -40,6 +40,12 @@ public class RoboTest {
 		controller.moverRobo("MME");
 	}
 	
+	@Test(expected = IllegalArgumentException.class)
+	public void testIllegalArgumentDois() throws IllegalArgumentException, ExceededAreaException {
+		RoboController controller = new RoboController();
+		controller.moverRobo("AAA");
+	}
+	
 	@Test
 	public void testUmMovimentoNorte() throws IllegalArgumentException, ExceededAreaException {
 		RoboController controller = new RoboController();
